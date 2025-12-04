@@ -11,8 +11,8 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "SchoolTool",
-  tagline: "SchoolTool is cool",
-  favicon: "img/favicon.ico",
+  tagline: "SchoolTool is Cool",
+  favicon: "img/schooltool.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -20,10 +20,10 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: "https://schooltool.at",
+  url: "http://localhost:8000/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/",
+  baseUrl: "/documentation/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -78,6 +78,8 @@ const config = {
     ],
   ],
 
+  plugins: [],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -94,17 +96,25 @@ const config = {
         },
         items: [
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            type: "doc",
+            docId: "anmeldetool/anmeldetool", // path in /docs folder (without .md)
+            label: "Anmeldetool",
             position: "left",
-            label: "Tutorial",
+          },
+          {
+            type: "doc",
+            docId: "nachhilfe/nachhilfe",
+            label: "Nachhilfetool",
+            position: "left",
           },
           { to: "/blog", label: "Blog", position: "left" },
+          /*
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/ITStudioAT/schooltool-docu",
             label: "GitHub",
             position: "right",
           },
+          */
         ],
       },
       footer: {
@@ -114,11 +124,16 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
-                to: "/docs/intro",
+                label: "Anmeldetool",
+                to: "/docs/anmeldetool",
+              },
+              {
+                label: "Nachhilfetool",
+                to: "/docs/nachhilfe",
               },
             ],
           },
+          /*
           {
             title: "Community",
             items: [
@@ -149,8 +164,9 @@ const config = {
               },
             ],
           },
+          */
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © 2025 ITStudio.at by Günther Kron.`,
       },
       prism: {
         theme: prismThemes.github,

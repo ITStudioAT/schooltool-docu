@@ -1,0 +1,8 @@
+{
+  "label": "Benutzer",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Erläuterung für Benutzer, wie das Anmeldetool verwendet wird."
+  }
+}
