@@ -29,3 +29,13 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+.small-image {
+  max-width: 500px;
+  width: 100%;
+}
+
+.image-800 {
+  max-width: 800px;
+  width: 100%;
+}
+

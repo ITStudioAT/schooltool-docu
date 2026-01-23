@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: "http://localhost:8000/",
+  url: "https://schooltool.at/",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/documentation/",
@@ -43,42 +43,36 @@ const config = {
   presets: [
     [
       "classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: "./sidebars.js",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          /*
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-            */
-        },
+      {
+        docs: false,
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          /*
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-          */
+          /* ... */
         },
-        theme: {
-          customCss: "./src/css/custom.css",
-        },
-      }),
+        theme: { customCss: "./src/css/custom.css" },
+      },
     ],
   ],
 
-  plugins: [],
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "anmeldetool",
+        path: "docs/anmeldetool",
+        routeBasePath: "anmeldetool",
+        sidebarPath: "./sidebars.anmeldetool.js",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "nachhilfetool",
+        path: "docs/nachhilfetool",
+        routeBasePath: "nachhilfetool",
+        sidebarPath: "./sidebars.nachhilfetool.js",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -89,84 +83,37 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: "SchoolTool",
-        logo: {
-          alt: "My Site Logo",
-          src: "img/schooltool_white.png",
-        },
         items: [
           {
             type: "doc",
-            docId: "anmeldetool/anmeldetool", // path in /docs folder (without .md)
+            docsPluginId: "anmeldetool",
+            docId: "index",
             label: "Anmeldetool",
             position: "left",
           },
           {
             type: "doc",
-            docId: "nachhilfe/nachhilfe",
+            docsPluginId: "nachhilfetool",
+            docId: "index",
             label: "Nachhilfetool",
             position: "left",
           },
-          { to: "/blog", label: "Blog", position: "left" },
-          /*
-          {
-            href: "https://github.com/ITStudioAT/schooltool-docu",
-            label: "GitHub",
-            position: "right",
-          },
-          */
+          { to: "/blog", label: "Neuigkeiten", position: "left" },
         ],
       },
+
       footer: {
         style: "dark",
         links: [
           {
             title: "Docs",
             items: [
-              {
-                label: "Anmeldetool",
-                to: "/docs/anmeldetool",
-              },
-              {
-                label: "Nachhilfetool",
-                to: "/docs/nachhilfe",
-              },
+              { label: "Anmeldetool", to: "/anmeldetool" },
+              { label: "Nachhilfetool", to: "/nachhilfetool" },
             ],
           },
-          /*
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "X",
-                href: "https://x.com/docusaurus",
-              },
-            ],
-          },
-          {
-            title: "More",
-            items: [
-              {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
-              },
-            ],
-          },
-          */
         ],
-        copyright: `Copyright © 2025 ITStudio.at by Günther Kron.`,
+        copyright: `Copyright © 2025-2026 ITStudio.at by Günther Kron.`,
       },
       prism: {
         theme: prismThemes.github,

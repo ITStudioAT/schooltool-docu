@@ -19,7 +19,7 @@ function HomepageHeader() {
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
           <img
-            src="/img/schooltool_white.png"
+            src="img/schooltool_white.png"
             alt="Anmeldungstool"
             style={{ width: "200px", height: "auto" }}
           />
