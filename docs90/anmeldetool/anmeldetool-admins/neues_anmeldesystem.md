@@ -22,10 +22,10 @@ Dieser Text wird den Benutzern am Bildschirm als **zusätzliche Information** an
 
 Maximale Anzahl der Anmeldungen für den gesamten Event.
 
-Beispiel: 300, d. h. zu diesem Event dürfen sich ingesamt nicht mehr als 300 Benutzer anmelden.
+Beispiel: 300, d. h. zu diesem Event dürfen sich insgesamt nicht mehr als 300 Benutzer anmelden.
 
 ### Telefon, Nachname Kind ...
 
 Alle angeklickten Eingabefelder kann der Benutzer eingeben.<br/>
-Sobald das Eingefeld angeklickt ist, erscheint nebenbei **Pflichtfeld**.<br/>
+Sobald das Eingabefeld angeklickt ist, erscheint nebenbei **Pflichtfeld**.<br/>
 Wenn das **Pflichtfeld** angeklickt ist, **muss** der Benutzer etwas eingeben.

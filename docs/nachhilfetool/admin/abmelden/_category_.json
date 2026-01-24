@@ -1,0 +1,9 @@
+{
+  "label": "Abmelden",
+  "collapsed": false,
+  "position": 4,
+  "link": {
+    "type": "doc",
+    "id": "admin/abmelden/index"
+  }
+}

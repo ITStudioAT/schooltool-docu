@@ -8,7 +8,7 @@ sidebar_position: 5
 
 Mit dem **Stift**-Symbol können Sie bestehendes Anmeldesystem ändern.
 
-Die Eingaben sind die selben wie beim [Anlegen eines neuen Anmeldesystems](/docs/anmeldetool/anmeldetool-admins/neues_anmeldesystem.md).
+Die Eingaben sind dieselben wie beim [Anlegen eines neuen Anmeldesystems](/docs/anmeldetool/anmeldetool-admins/neues_anmeldesystem.md).
 
 ## Anmeldesystem löschen
 

@@ -9,7 +9,7 @@ Ein Event ist zum Beispiel das **Anmeldegespräch neuer Schüler:innen**.
 
 - Pro Schuljahr können **beliebig viele Events** angelegt werden
 - Die buchbaren Termine können **Einzel- oder Gruppentermine** sein
-- Es können **verschiedene Kriterien** festgelegt werden, die die Benutzer bei der Anmeldung ausfühlen müssen (z. B. Nachname, Vorname, Telefonnummer)
+- Es können **verschiedene Kriterien** festgelegt werden, die die Benutzer bei der Anmeldung ausfüllen müssen (z. B. Nachname, Vorname, Telefonnummer)
 - Es können Anmeldelisten **gedruckt** werden oder als **Excel-Datei** ausgegeben werden
 
 ## Admin-Seite

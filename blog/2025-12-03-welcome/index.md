@@ -5,6 +5,6 @@ authors: [kron]
 tags: [schooltool]
 ---
 
-Hier können Sie aktulle Änderungen von Schooltool nachverfolgen.
+Hier können Sie aktuelle Änderungen von Schooltool nachverfolgen.
 
 <!-- truncate -->

@@ -25,7 +25,7 @@ src={require('./\_img/angebot_genehmigen.png').default}
 alt="Genehmigen"
 />
 
-✉️ Der/die Schüler:in wird über diesen Vorgang per E-Mail verständigt
+✉️ Die Schüler:in wird über diesen Vorgang per E-Mail verständigt
 
 ### Rücknahme einer Genehmigung
 
@@ -36,11 +36,11 @@ src={require('./\_img/angebot_nicht_genehmigen.png').default}
 alt="Nicht genehmigen"
 />
 
-✉️ Der/die Schüler:in wird über diesen Vorgang per E-Mail verständigt
+✉️ Die Schüler:in wird über diesen Vorgang per E-Mail verständigt
 
 ### Online-Stellen eines Angebotes
 
-Ein freigegebenes Angebot kann online gestellt werden,, indem man es anklickt und anschließend auf **Genehmigen** klickt.
+Ein freigegebenes Angebot kann online gestellt werden, indem man es anklickt und anschließend auf **Genehmigen** klickt.
 
 <img
 src={require('./\_img/angebot_online.png').default}
@@ -65,7 +65,7 @@ src={require('./\_img/angebot_loeschen_2.png').default}
 alt="Löschen 2"
 />
 
-✉️ Der/die Schüler:in wird über diesen Vorgang per E-Mail verständigt
+✉️ Die Schüler:in wird über diesen Vorgang per E-Mail verständigt
 
 ## Statistik
 
@@ -74,7 +74,7 @@ In der Statistik können Sie folgende Informationen sehen:
 - Anzahl der Angebote
 - Freigegebene Angebote
 - Angebot, die online sind
-- Anzahl der Schüler:innen, die beim Nachhilftool registriert sind
+- Anzahl der Schüler:innen, die beim Nachhilfetool registriert sind
 - Anzahl der Schüler:innen mit Angeboten
 
 <img

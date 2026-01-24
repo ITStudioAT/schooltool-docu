@@ -5,4 +5,4 @@ sidebar_position: 3
 
 # Blog
 
-Hier gehts um den Blog
+Hier geht's um den Blog.

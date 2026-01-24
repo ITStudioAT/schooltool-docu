@@ -20,7 +20,7 @@ Ein **grüner Punkt** davor zeigt an, dass das System **eingeschaltet** ist (Ben
 
 Ein **roter Punkt** zeigt an, dass das System **ausgeschaltet**, sprich inaktiv ist.
 
-Mit dem **Ein-/Auschaltsymbol** kann das Anmeldesystem ein- oder ausgeschaltet werden.
+Mit dem **Ein-/Ausschaltsymbol** kann das Anmeldesystem ein- oder ausgeschaltet werden.
 
 ![Übersicht](./img/details_uebersicht.png)
 

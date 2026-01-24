@@ -5,4 +5,4 @@ sidebar_position: 1
 
 # Anmeldetool
 
-Hier gehts ums Anmeldtool
+Hier geht's ums Anmeldetool.

@@ -22,8 +22,8 @@ Das Sekretariat erspart sich zahllose Telefonate **und wird somit deutlich entla
 ### Praktisches Beispiel
 
 Die Schule erstellt einen Event **Beratungsgespräche zur Schulaufnahme** und erstellt verschiedene Termine für diese Gespräche.<br/>
-Diese Berratungstermine können Einzeltermine oder Gruppentermine sein.<br/>
+Diese Beratungstermine können Einzeltermine oder Gruppentermine sein.<br/>
 
-Der Benutzer wählt seinen geünschten Termin aus. **Fertig!**
+Der Benutzer wählt seinen gewünschten Termin aus. **Fertig!**
 
 ![Terminauswahl im Anmeldetool](./img/anmeldung.png)
