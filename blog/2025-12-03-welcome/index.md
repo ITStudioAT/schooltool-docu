@@ -6,5 +6,3 @@ tags: [schooltool]
 ---
 
 Hier können Sie aktuelle Änderungen von Schooltool nachverfolgen.
-
-<!-- truncate -->

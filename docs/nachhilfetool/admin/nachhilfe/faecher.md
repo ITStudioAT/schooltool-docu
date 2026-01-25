@@ -10,7 +10,7 @@ Unter dem Menüpunkt _Fächer_ können die Fächer angelegt und verwaltet werden
 <img
 src={require('./\_img/faecher.png').default}
 alt="Fächer"
-className="image-800"
+className="small-image"
 />
 
 Im angezeigten Beispiel stehen also folgende Fächer zur Verfügung, für die Schüler:innen Nachhilfe anbieten können:

@@ -1,0 +1,18 @@
+{
+  "item.label.Anmeldetool": {
+    "message": "Anmeldetool",
+    "description": "Navbar item with label Anmeldetool"
+  },
+  "item.label.Nachhilfetool": {
+    "message": "Nachhilfetool",
+    "description": "Navbar item with label Nachhilfetool"
+  },
+  "item.label.Neuigkeiten": {
+    "message": "Neuigkeiten",
+    "description": "Navbar item with label Neuigkeiten"
+  },
+  "theme.blog.sidebar.recentPostsTitle": {
+    "message": "Neueste Beiträge",
+    "description": "Title of the blog sidebar recent posts section"
+  }
+}

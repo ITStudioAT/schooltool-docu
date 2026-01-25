@@ -28,7 +28,7 @@ Die E-Mail-Adresse kann eine beliebige sein, muss also nicht unbedingt dem Nachh
 <img
 src={require('./\_img/einstellungen_bestaetigung.png').default}
 alt="Bestätigung"
-className="image-800"
+className="small-image"
 />
 
 ## Anzahl gleichzeitiger Angebote pro Schüler:in

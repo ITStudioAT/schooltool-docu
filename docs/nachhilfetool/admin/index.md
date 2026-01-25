@@ -1,5 +1,5 @@
 ---
-title: Admin – Überblick
+title: Admin
 ---
 
 # Einstieg
@@ -14,7 +14,7 @@ Geben Sie Ihre E-Mail ein und klicken auf _Weiter_.<br />
 Geben Sie danach Ihr Kennwort ein und klicken auf _Anmelden_.
 
 <img
-src={require('./\_img/image.png').default}
+src={require('./\_img/login.png').default}
 alt="alt text"
 className="small-image"
 />

@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.nachhilfetoolSidebar.category.Nachhilfetool": {
+    "message": "Nachhilfetool",
+    "description": "The label for category 'Nachhilfetool' in sidebar 'nachhilfetoolSidebar'"
+  },
+  "sidebar.nachhilfetoolSidebar.category.Administrator:in": {
+    "message": "Administrator:in",
+    "description": "The label for category 'Administrator:in' in sidebar 'nachhilfetoolSidebar'"
+  },
+  "sidebar.nachhilfetoolSidebar.category.Nachhilfe": {
+    "message": "Nachhilfe",
+    "description": "The label for category 'Nachhilfe' in sidebar 'nachhilfetoolSidebar'"
+  }
+}

@@ -37,7 +37,7 @@ const config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "de",
-    locales: ["de"],
+    locales: ["de", "en"],
   },
 
   presets: [
@@ -83,6 +83,11 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
+        logo: {
+          alt: "SchoolTool",
+          src: "img/schooltool_white.png",
+          href: "/",
+        },
         items: [
           {
             type: "doc",

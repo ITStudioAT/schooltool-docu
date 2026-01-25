@@ -37,7 +37,7 @@ Jetzt können folgende Datenfelder ausgefüllt werden:
 <img
 src={require('./\_img/benutzer_hinzufuegen.png').default}
 alt="Benutzer hinzufügen"
-className="image-800"
+className="small-image"
 />
 
 ## Weitere Aktionen
@@ -110,5 +110,5 @@ Das Löschen muss noch einmal bestätigt werden.
 <img
 src={require('./\_img/benutzer_loeschen_2.png').default}
 alt="Benutzer löschen 2"
-className="image-800"
+className="small-image"
 />
