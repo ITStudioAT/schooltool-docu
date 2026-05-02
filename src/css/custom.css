@@ -1,41 +1,657 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+/* ═══════════════════════════════════════════════════════════════
+   EDITORIAL TECHNICAL — Docusaurus Custom CSS
+   All palette values live here as CSS variables.
+   No hard-coded hex outside this file.
+   ═══════════════════════════════════════════════════════════════ */
 
-/* You can override the default Infima variables here. */
+/* ─── COLOR & DESIGN TOKENS — LIGHT ─────────────────────────── */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Palette */
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --line: #e7e9ee;
+  --line-strong: #d6d9e0;
+  --ink: #0b1220;
+  --ink-2: #1f2937;
+  --muted: #5b6577;
+  --muted-2: #8a93a3;
+  --indigo: #3a4cf7;
+  --indigo-ink: #1a25b5;
+  --ice: #e8efff;
+  --accent: #ff5a00;
+  --code-bg: #0b1220;
+  --code-ink: #e6ebf5;
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow-sm: 0 1px 0 rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 1px 0 rgba(15, 23, 42, 0.04), 0 8px 24px -12px rgba(15, 23, 42, 0.18);
+
+  /* ── Docusaurus IFM mappings ── */
+  --ifm-color-primary: var(--indigo);
+  --ifm-color-primary-dark: var(--indigo-ink);
+  --ifm-color-primary-darker: #1520a0;
+  --ifm-color-primary-darkest: #111a8a;
+  --ifm-color-primary-light: #5162f8;
+  --ifm-color-primary-lighter: #6574f9;
+  --ifm-color-primary-lightest: #8591fb;
+
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--surface);
+  --ifm-font-color-base: var(--ink);
+  --ifm-heading-color: var(--ink);
+  --ifm-link-color: var(--indigo);
+  --ifm-link-hover-color: var(--indigo-ink);
+
+  --ifm-navbar-background-color: transparent;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-height: 60px;
+  --ifm-navbar-padding-horizontal: 28px;
+
+  --ifm-toc-border-color: var(--line);
+
+  --ifm-font-family-base: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --ifm-font-family-monospace: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ifm-font-size-base: 15px;
+  --ifm-line-height-base: 1.6;
+  --ifm-code-font-size: 90%;
+  --ifm-global-radius: var(--radius);
+
+  --ifm-sidebar-width: 260px;
+  --ifm-menu-color: var(--muted);
+  --ifm-menu-color-active: var(--indigo-ink);
+  --ifm-menu-color-background-active: var(--ice);
+  --ifm-menu-color-background-hover: var(--ice);
+  --ifm-menu-link-padding-horizontal: 10px;
+  --ifm-menu-link-padding-vertical: 7px;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.06);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ─── COLOR TOKENS — DARK ────────────────────────────────────── */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --bg: #0a0d14;
+  --surface: #0f131c;
+  --line: #1d2230;
+  --line-strong: #262d3e;
+  --ink: #eef1f7;
+  --ink-2: #cdd3df;
+  --muted: #8a93a8;
+  --muted-2: #5b6477;
+  --indigo: #7d8bff;
+  --indigo-ink: #a9b3ff;
+  --ice: #172238;
+  --code-bg: #070a11;
+  --shadow-md: 0 1px 0 rgba(0, 0, 0, 0.4), 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--surface);
+  --ifm-font-color-base: var(--ink);
+  --ifm-heading-color: var(--ink);
+  --ifm-link-color: var(--indigo);
+  --ifm-link-hover-color: var(--indigo-ink);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
 }
 
-.small-image {
-  max-width: 500px;
+/* ─── BASE ───────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--ice);
+  color: var(--indigo-ink);
+}
+
+/* ─── NAVBAR ─────────────────────────────────────────────────── */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: color-mix(in oklab, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(10px);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
+  height: var(--ifm-navbar-height);
+}
+
+.navbar__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navbar__brand {
+  gap: 10px;
+}
+
+.navbar__logo {
+  height: 26px;
+  width: 26px;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+.navbar__logo img {
+  width: 26px;
+  height: 26px;
+}
+
+.navbar__title {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* Nav links */
+.navbar__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 7px 12px;
+  border-radius: 7px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.navbar__link:hover {
+  color: var(--ink);
+  background: var(--ice);
+  text-decoration: none;
+}
+
+.navbar__link--active {
+  color: var(--ink);
+  background: var(--ice);
+}
+
+/* CTA "Erste Schritte" — last item on the right */
+.navbar__items--right > .navbar__item:last-child .navbar__link {
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 8px;
+  font-size: 13.5px;
+  padding: 8px 14px;
+}
+
+.navbar__items--right > .navbar__item:last-child .navbar__link:hover {
+  background: var(--ink-2);
+  color: var(--bg);
+}
+
+/* Dark mode toggle button */
+.navbar__items--right button[class*='colorModeToggle'],
+.navbar__items--right [class*='toggle_'] {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--line) !important;
+  background: var(--surface) !important;
+  color: var(--muted);
+  display: grid;
+  place-items: center;
+}
+
+/* ─── SIDEBAR ────────────────────────────────────────────────── */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--line) !important;
+  overflow-x: hidden;
+  --sidebar-active-bar-left: 0px;
+  --sidebar-active-offset: 0px;
+}
+
+.thin-scrollbar.theme-doc-sidebar-menu {
+  padding: 20px 8px 40px 0 !important;
+}
+
+/* Hide caret buttons and default sublist arrow */
+.menu__caret,
+.menu__link--sublist-caret::after {
+  display: none !important;
+}
+
+/* All links — uniform font, same size */
+.menu__link {
+  font-family: var(--ifm-font-family-base) !important;
+  font-size: 13.5px !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  border-radius: 7px !important;
+  padding: 7px 10px !important;
+  transition: color 0.15s, background 0.15s !important;
+  position: relative;
+}
+
+/* Align top-level sidebar rows with first-level child rows. */
+.menu__list > .menu__list-item:not(.sidebar-section-title) > .menu__link,
+.menu__list > .menu__list-item:not(.sidebar-section-title) > .menu__list-item-collapsible > .menu__link {
+  padding-left: calc(var(--ifm-menu-link-sublist-indent, 1rem) + var(--ifm-menu-link-padding-horizontal)) !important;
+}
+
+/* Section root link (e.g. "Restauranttool" at the top of its sidebar) */
+.sidebar-section-title .menu__link {
+  color: var(--indigo) !important;
+  font-size: 19px !important;
+  font-weight: 700 !important;
+  margin-bottom: 24px !important;
+}
+
+.sidebar-section-title .menu__link::before {
+  display: none !important;
+}
+
+/* Category labels — same font, slightly bolder */
+.menu__link--sublist {
+  color: var(--ink) !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  margin-top: 6px !important;
+}
+
+.menu__link--sublist::before {
+  display: none !important;
+}
+
+.menu__link--sublist:hover {
+  background: var(--ice) !important;
+  color: var(--ink) !important;
+}
+
+/* Regular links */
+.menu__link:not(.menu__link--sublist) {
+  color: var(--muted);
+  font-weight: 400 !important;
+}
+
+.menu__link:not(.menu__link--sublist):hover {
+  color: var(--ink);
+  background: var(--ice);
+}
+
+/* Active link — highlight color */
+.menu__link--active:not(.menu__link--sublist) {
+  color: var(--indigo-ink) !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+}
+
+/* Left accent bar — always at the sidebar's left edge, only on the active page */
+.menu__link[aria-current="page"]::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  top: 7px;
+  bottom: 7px;
+  left: calc(var(--sidebar-active-bar-left) - var(--sidebar-active-offset));
+  background: var(--indigo);
+  border-radius: 2px;
+  display: block !important;
+}
+
+.menu__link--sublist[aria-current="page"] {
+  color: var(--indigo-ink) !important;
+  font-weight: 500 !important;
+  overflow: visible !important;
+}
+
+.categoryLink_byQd[aria-current="page"],
+.menu__list-item-collapsible--active {
+  overflow: visible !important;
+}
+
+.menu__link--sublist[aria-current="page"]::before {
+  display: block !important;
+}
+
+/* Keep the active bar pinned to the sidebar's left edge at every nesting level. */
+.menu__list .menu__list {
+  --sidebar-active-offset: var(--ifm-menu-link-padding-horizontal);
+}
+
+.menu__list .menu__list .menu__list {
+  --sidebar-active-offset: calc(2 * var(--ifm-menu-link-padding-horizontal));
+}
+
+.menu__list .menu__list .menu__list .menu__list {
+  --sidebar-active-offset: calc(3 * var(--ifm-menu-link-padding-horizontal));
+}
+
+/* ─── TABLE OF CONTENTS ──────────────────────────────────────── */
+.table-of-contents {
+  border-left: none !important;
+  padding: 0 !important;
+}
+
+.table-of-contents::before {
+  content: "Auf dieser Seite";
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted-2);
+  display: block;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.table-of-contents__link {
+  display: block;
+  padding: 5px 0 5px 12px !important;
+  color: var(--muted) !important;
+  border-left: 1px solid var(--line) !important;
+  line-height: 1.45;
+  font-size: 13px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.table-of-contents__link:hover {
+  color: var(--ink) !important;
+  border-left-color: var(--line-strong) !important;
+  text-decoration: none;
+}
+
+.table-of-contents__link--active {
+  color: var(--indigo) !important;
+  border-left-color: var(--indigo) !important;
+  font-weight: 500;
+}
+
+/* Depth-2 TOC items */
+.table-of-contents ul ul .table-of-contents__link {
+  padding-left: 24px !important;
+  font-size: 12.5px;
+}
+
+/* ─── ARTICLE TYPOGRAPHY ─────────────────────────────────────── */
+.markdown > h1:first-child,
+.markdown h1 {
+  font-size: 62px;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  margin: 0 0 36px;
+  font-weight: 600;
+  text-wrap: balance;
+  color: var(--indigo);
+}
+
+.markdown h2 {
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+  margin: 48px 0 14px;
+  scroll-margin-top: 90px;
+  color: var(--ink);
+}
+
+.markdown h3 {
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  margin: 32px 0 10px;
+  color: var(--ink);
+}
+
+.markdown p {
+  color: var(--ink-2);
+  max-width: 68ch;
+}
+
+.markdown ul,
+.markdown ol {
+  color: var(--ink-2);
+}
+
+.markdown li {
+  margin: 6px 0;
+}
+
+.markdown strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* Lede — first paragraph in a doc page */
+.theme-doc-markdown > p:first-of-type {
+  font-size: 19px;
+  color: var(--ink-2);
+  max-width: 62ch;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+/* ─── INLINE CODE ────────────────────────────────────────────── */
+code {
+  background: var(--ice) !important;
+  color: var(--indigo-ink) !important;
+  padding: 1px 6px !important;
+  border-radius: 4px !important;
+  font-size: 0.9em !important;
+  border: none !important;
+}
+
+/* ─── CODE BLOCKS ────────────────────────────────────────────── */
+[class*='codeBlockContainer'] {
+  background: var(--code-bg) !important;
+  border-radius: var(--radius) !important;
+  margin: 18px 0 22px !important;
+  overflow: hidden;
+  border: none !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+[class*='codeBlockContent'] {
+  background: var(--code-bg) !important;
+}
+
+[class*='codeBlockTitle'] {
+  background: color-mix(in oklab, var(--code-bg) 80%, white 20%) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  color: #9aa4ba !important;
+  font-family: var(--ifm-font-family-monospace) !important;
+  font-size: 12px !important;
+}
+
+[class*='codeBlockContainer'] pre {
+  background: var(--code-bg) !important;
+  color: var(--code-ink) !important;
+  padding: 16px 18px !important;
+}
+
+/* Override inline code inside code blocks */
+[class*='codeBlockContainer'] code {
+  background: transparent !important;
+  color: var(--code-ink) !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-size: 13px !important;
+}
+
+/* Tabs (npm / pnpm / yarn) inside a code block */
+.tabs-container .tabs {
+  background: var(--code-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 6px;
+  margin: 0;
+}
+
+.tabs-container .tabs__item {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+  color: #9aa4ba;
+  border-bottom: 2px solid transparent;
+  padding: 9px 14px;
+  border-radius: 0;
+  margin-bottom: -1px;
+  transition: color 0.15s;
+}
+
+.tabs-container .tabs__item--active {
+  color: #ffffff !important;
+  border-bottom-color: var(--indigo) !important;
+  background: transparent !important;
+}
+
+.tabs-container .tabs__item:hover:not(.tabs__item--active) {
+  color: #c5ccdb;
+  background: transparent;
+}
+
+/* ─── ADMONITIONS ────────────────────────────────────────────── */
+.admonition {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-left: 3px solid var(--indigo) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 14px 16px !important;
+  margin: 18px 0 22px !important;
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  box-shadow: none !important;
+}
+
+.admonition-note { border-left-color: var(--indigo) !important; }
+.admonition-tip  { border-left-color: #22c55e !important; }
+.admonition-info { border-left-color: var(--indigo) !important; }
+.admonition-caution { border-left-color: #f59e0b !important; }
+.admonition-danger  { border-left-color: #ef4444 !important; }
+
+[class*='admonitionHeading'] {
+  margin-bottom: 6px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+[class*='admonitionIcon'] {
+  width: 22px !important;
+  height: 22px !important;
+  border-radius: 6px !important;
+  background: var(--ice) !important;
+  color: var(--indigo) !important;
+  display: grid !important;
+  place-items: center !important;
+  flex-shrink: 0 !important;
+}
+
+[class*='admonitionIcon'] svg {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+[class*='admonitionContent'] p {
+  font-size: 14px !important;
+  color: var(--muted) !important;
+  max-width: none !important;
+}
+
+/* ─── PAGER ──────────────────────────────────────────────────── */
+.pagination-nav {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 14px !important;
+  margin-top: 56px !important;
+}
+
+.pagination-nav__item {
   width: 100%;
 }
 
-.image-800 {
-  max-width: 800px;
-  width: 100%;
+.pagination-nav__link {
+  display: block !important;
+  padding: 16px 18px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+  background: var(--surface) !important;
+  transition: border-color 0.15s, background 0.15s !important;
+  box-shadow: none !important;
+  height: 100%;
 }
 
+.pagination-nav__link:hover {
+  border-color: var(--indigo) !important;
+  background: var(--ice) !important;
+  text-decoration: none;
+}
+
+.pagination-nav__sublabel {
+  font-family: var(--ifm-font-family-monospace) !important;
+  font-size: 11.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: var(--muted) !important;
+  font-weight: 400 !important;
+}
+
+.pagination-nav__label {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  color: var(--ink) !important;
+  margin-top: 4px;
+}
+
+/* ─── BREADCRUMBS ────────────────────────────────────────────── */
+.breadcrumbs__link,
+.breadcrumbs__item a {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.breadcrumbs__item--active .breadcrumbs__link,
+.breadcrumbs__item--active a {
+  color: var(--ink);
+}
+
+.breadcrumbs__separator {
+  color: var(--line-strong);
+}
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+.footer,
+.footer--dark {
+  background: var(--surface) !important;
+  border-top: 1px solid var(--line);
+  padding: 32px 28px;
+}
+
+.footer__title {
+  color: var(--ink) !important;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.footer__link-item {
+  color: var(--muted) !important;
+  font-size: 13.5px;
+}
+
+.footer__link-item:hover {
+  color: var(--ink) !important;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--muted-2) !important;
+  font-size: 12.5px;
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted-2); }
+
+/* ─── LEGACY IMAGE HELPERS ───────────────────────────────────── */
+.small-image { max-width: 500px; width: 100%; }
+.image-800   { max-width: 800px; width: 100%; }

@@ -1,41 +1,33 @@
 ---
 title: Nachhilfetool
+sidebar_position: 1
+sidebar_class_name: sidebar-section-title
 ---
 
 # Nachhilfetool
 
-Wäre es nicht cool, wenn begabte Schüler:innen ihren Mitschüler:innen online Nachhilfe anbieten könnten?<br />
-Genau **diese** Möglichkeit bietet das _Nachhilfetool_ auf **einfache** Art und Weise.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
-Schüler:innen können ihre **Nachhilfeangebote** ganz einfach online stellen.<br />
-Andere Schüler:innen können diese Angebote unkompliziert finden und Kontakt aufnehmen.
+## Übersicht
 
-## Idee
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-Die Idee dazu wurde im **Christian-Doppler-Gymnasium** entwickelt.<br />
-Vor einigen Jahren hat die Schülervertretung die Aktion **„Schüler helfen Schülern“** ins Leben gerufen.<br />
-Die Idee war, dass sich Schüler:innen innerhalb der Schule bei Lernproblemen gegenseitig helfen.<br />
-Im Schuljahr 2025/26 erlebte diese spannende Idee ein neues Revival.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
-## Entwicklung der Online-Version
+## Erste Schritte
 
-Gleichzeitig mit der Neubelebung dieser wertvollen Idee, dass sich Schüler:innen untereinander helfen können, wurde die Entwicklung einer Online-Version gestartet.<br />
-Nach monatelanger Entwicklung konnte Ende Jänner 2026 die Beta-Version (=Testversion) online gestellt werden.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 
-### Testphase
+- Ut labore et dolore magnam aliquam quaerat voluptatem
+- Quis autem vel eum iure reprehenderit qui in ea voluptate
+- Neque porro quisquam est qui dolorem ipsum quia dolor
 
-Ein engagiertes Team aus Schüler:innen und Lehrer:innen des _CDGym Salzburg_ hat nun eine umfassende **Testphase** gestartet.<br />
-Ziel dabei ist es, etwaige Fehler zu finden und zu korrigieren, um letztendlich ein optimales Benutzererlebnis zu gewährleisten.<br />
-Sobald diese Testphase erfolgreich beendet ist, wird das Programm auf die gesamte Schule ausgerollt.
+## Funktionsumfang
 
-### Was kommt danach?
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-Die App ist so angelegt, dass sie auch auf **beliebige andere Schulen** erweitert werden kann.<br />
-Sobald alle Tests erfolgreich abgeschlossen sind, wird die weitere Ausrollung erfolgen.<br />
-Als zeitlicher Horizont ist das **Schuljahr 2026/27** geplant.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
 
-### Kontakt
-
-Sie können jederzeit mit dem Entwicklungsteam Kontakt aufnehmen:<br />
-Dipl.-Ing. Günther Kron<br />
-✉️ hallo@itstudio.at
+:::info Hinweis
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.
+:::

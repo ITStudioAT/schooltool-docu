@@ -1,23 +1,218 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
+/* ─── HOMEPAGE — Editorial Technical ────────────────────────── */
 
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.home {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
+/* ── Hero ─────────────────────────────────────────────────────── */
+.hero {
+  padding: 80px 0 60px;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .hero {
+    padding: 48px 0 40px;
   }
 }
 
-.buttons {
+.eyebrow {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--indigo);
+  margin-bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 24px;
+  height: 1px;
+  background: var(--indigo);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.h1 {
+  font-size: 88px;
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+  margin: 0 0 24px;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+@media (max-width: 900px) {
+  .h1 {
+    font-size: 56px;
+  }
+}
+
+.em {
+  font-style: normal;
+  color: var(--indigo);
+  font-weight: 500;
+}
+
+.lede {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 55ch;
+  margin: 0 0 28px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btnPrimary,
+.btnGhost {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s, border-color 0.15s, background 0.15s;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-1px);
+  color: var(--bg);
+  text-decoration: none;
+}
+
+.btnGhost {
+  border-color: var(--line-strong);
+  color: var(--ink);
+  background: var(--surface);
+}
+
+.btnGhost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* ── Hero meta panel ──────────────────────────────────────────── */
+.heroMeta {
+  display: grid;
+  gap: 14px;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 12px;
+}
+
+.metaRow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 10px;
+}
+
+.metaKey {
+  color: var(--muted-2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.metaVal {
+  color: var(--ink-2);
+}
+
+/* ── App cards grid ───────────────────────────────────────────── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  margin: 48px 0 80px;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 200px;
+  position: relative;
+  transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  background: var(--ice);
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardNum {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 11px;
+  color: var(--muted-2);
+  letter-spacing: 0.06em;
+}
+
+.cardTitle {
+  font-size: 18px;
+  margin: 0;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  max-width: none;
+  flex: 1;
+}
+
+.cardArrow {
+  margin-top: auto;
+  color: var(--indigo);
+  font-size: 13px;
+  font-family: var(--ifm-font-family-monospace);
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 6px;
+  text-decoration: none;
 }

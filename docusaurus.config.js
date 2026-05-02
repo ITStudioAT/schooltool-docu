@@ -1,44 +1,51 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
-
 import { themes as prismThemes } from "prism-react-renderer";
-
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "SchoolTool",
-  tagline: "SchoolTool is Cool",
+  tagline: "Werkzeuge für den Schulalltag.",
   favicon: "img/schooltool.ico",
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: "https://schooltool.at/",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/documentation/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "ITStudioAT", // Usually your GitHub org/user name.
-  projectName: "schooltool-docu", // Usually your repo name.
+  organizationName: "ITStudioAT",
+  projectName: "schooltool-docu",
 
   onBrokenLinks: "throw",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "de",
     locales: ["de", "en"],
   },
+
+  headTags: [
+    {
+      tagName: "link",
+      attributes: { rel: "preconnect", href: "https://fonts.googleapis.com" },
+    },
+    {
+      tagName: "link",
+      attributes: {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossorigin: "anonymous",
+      },
+    },
+  ],
+
+  stylesheets: [
+    {
+      href: "https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap",
+      type: "text/css",
+      crossorigin: "anonymous",
+    },
+  ],
 
   presets: [
     [
@@ -72,22 +79,55 @@ const config = {
         sidebarPath: "./sidebars.nachhilfetool.js",
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "unterrichtstool",
+        path: "docs/unterrichtstool",
+        routeBasePath: "unterrichtstool",
+        sidebarPath: "./sidebars.unterrichtstool.js",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "restauranttool",
+        path: "docs/restauranttool",
+        routeBasePath: "restauranttool",
+        sidebarPath: "./sidebars.restauranttool.js",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "releases",
+        path: "docs/releases",
+        routeBasePath: "releases",
+        sidebarPath: "./sidebars.releases.js",
+      },
+    ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: "img/schooltool_white.png",
       colorMode: {
         respectPrefersColorScheme: true,
       },
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true,
+        },
+      },
       navbar: {
+        title: "SchoolTool",
         logo: {
           alt: "SchoolTool",
-          src: "img/schooltool_white.png",
+          src: "img/brand-mark.svg",
           href: "/",
         },
+        hideOnScroll: false,
         items: [
           {
             type: "doc",
@@ -103,25 +143,39 @@ const config = {
             label: "Nachhilfetool",
             position: "left",
           },
-          { to: "/blog", label: "Neuigkeiten", position: "left" },
+          {
+            type: "doc",
+            docsPluginId: "unterrichtstool",
+            docId: "index",
+            label: "Unterrichtstool",
+            position: "left",
+          },
+          {
+            type: "doc",
+            docsPluginId: "restauranttool",
+            docId: "index",
+            label: "Restaurantool",
+            position: "left",
+          },
+          { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "doc",
+            docsPluginId: "releases",
+            docId: "index",
+            label: "Changelog",
+            position: "right",
+          },
         ],
       },
 
       footer: {
         style: "dark",
-        links: [
-          {
-            title: "Docs",
-            items: [
-              { label: "Anmeldetool", to: "/anmeldetool" },
-              { label: "Nachhilfetool", to: "/nachhilfetool" },
-            ],
-          },
-        ],
-        copyright: `Copyright © 2025-2026 ITStudio.at by Günther Kron.`,
+        links: [],
+        copyright: `Copyright © 2025–2026 ITStudio.at by Günther Kron.`,
       },
+
       prism: {
-        theme: prismThemes.github,
+        theme: prismThemes.dracula,
         darkTheme: prismThemes.dracula,
       },
     }),

@@ -1,10 +1,10 @@
 ---
-title: Anmeldetool
+title: Unterrichtstool
 sidebar_position: 1
 sidebar_class_name: sidebar-section-title
 ---
 
-# Anmeldetool
+# Unterrichtstool
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
