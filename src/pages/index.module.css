@@ -183,6 +183,21 @@
   color: inherit;
 }
 
+.cardDisabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+.cardDisabled:hover {
+  background: var(--surface);
+}
+
+.cardDisabled .cardTitle,
+.cardDisabled .cardDesc,
+.cardDisabled .cardArrow {
+  color: var(--muted-2);
+}
+
 .cardNum {
   font-family: var(--ifm-font-family-monospace);
   font-size: 11px;

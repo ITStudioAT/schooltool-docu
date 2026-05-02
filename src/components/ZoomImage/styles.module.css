@@ -10,6 +10,13 @@
   opacity: 0.85;
 }
 
+.framed {
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-md);
+  background: var(--surface);
+  padding: 6px;
+}
+
 .overlay {
   position: fixed;
   inset: 0;

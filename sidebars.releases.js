@@ -6,7 +6,7 @@ const sidebars = {
       type: "category",
       label: "Versionen",
       collapsed: false,
-      items: [{ type: "doc", id: "v3-31-11" }],
+      items: [{ type: "doc", id: "v3-32-1" }],
     },
     { type: "doc", id: "bekannte-bugs" },
     { type: "doc", id: "roadmap" },

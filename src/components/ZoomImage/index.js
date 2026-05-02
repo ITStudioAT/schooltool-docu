@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
 
-export default function ZoomImage({ src, alt }) {
+export default function ZoomImage({ src, alt, framed = false }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -20,7 +20,7 @@ export default function ZoomImage({ src, alt }) {
       <img
         src={src}
         alt={alt}
-        className={styles.thumb}
+        className={`${styles.thumb} ${framed ? styles.framed : ""}`}
         onClick={() => setOpen(true)}
       />
       {open && (

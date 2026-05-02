@@ -29,6 +29,21 @@ const sidebars = {
             { type: "doc", id: "admin/einstellungen/online-bestellung" },
           ],
         },
+        {
+          type: "category",
+          label: "Restaurant",
+          link: { type: "doc", id: "admin/restaurant/index" },
+          collapsed: true,
+          items: [
+            { type: "doc", id: "admin/restaurant/ueberblick" },
+            { type: "doc", id: "admin/restaurant/speisen" },
+            { type: "doc", id: "admin/restaurant/menues" },
+            { type: "doc", id: "admin/restaurant/menueplaene" },
+            { type: "doc", id: "admin/restaurant/auswertungen" },
+            { type: "doc", id: "admin/restaurant/benutzer" },
+            { type: "doc", id: "admin/restaurant/sepa-verwaltung" },
+          ],
+        },
       ],
     },
     {

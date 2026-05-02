@@ -8,5 +8,5 @@
 [INFO] Starting the development server...
 [SUCCESS] Docusaurus website is running at: http://localhost:3000/documentation/
 [90m[[90mwebpackbar[90m][39m [36mi[39m Compiling Client
-[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 761.84ms
+[90m[[90mwebpackbar[90m][39m [32m√[39m Client: Compiled successfully in 737.35ms
 [1mclient[39m[22m (webpack 5.105.4) compiled [1m[32msuccessfully[39m[22m

@@ -7,13 +7,13 @@ sidebar_position: 1
 
 Versionshistorie, bekannte Fehler und geplante Änderungen für alle Schooltool-Apps.
 
-**Aktuelle Version:** `v3.31.11`
+**Aktuelle Version:** `v3.32.1`
 
 ## Versionen
 
-| Version | Datum | Highlights |
-|---------|-------|------------|
-| [v3.31.11](./v3-31-11) | 28.04.2026 | Erste dokumentierte Version |
+| Version              | Datum      | Highlights                         |
+| -------------------- | ---------- | ---------------------------------- |
+| [v3.32.1](./v3-32-1) | 02.05.2026 | Admin: Verbesserte User-Verwaltung |
 
 ## Weitere Informationen
 

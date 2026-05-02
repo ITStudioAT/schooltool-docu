@@ -23,20 +23,20 @@ const APPS = [
   {
     num: "01",
     title: "Anmeldetool",
-    desc: "Terminvereinbacrung für die Schulanmeldung oder Bewerbungsgespräche.",
-    href: "/anmeldetool",
+    desc: "Terminvereinbarung für die Schulanmeldung oder Bewerbungsgespräche.",
+    disabled: true,
   },
   {
     num: "02",
     title: "Nachhilfetool",
     desc: "Schüler:innen helfen Schüler:innen. Nachhilfeangebote einstellen, Kontakt aufnehmen, voneinander lernen.",
-    href: "/nachhilfetool",
+    disabled: true,
   },
   {
     num: "03",
     title: "Unterrichtstool",
     desc: "Digitale Unterstützung für den Unterrichtsalltag. Materialien, Aufgaben und Feedback an einem Ort.",
-    href: "/unterrichtstool",
+    disabled: true,
   },
   {
     num: "04",
@@ -49,8 +49,8 @@ const APPS = [
 export default function Home() {
   return (
     <Layout
-      title="Schulalltag-Tools, die einfach funktionieren"
-      description="Eine wachsende Sammlung kleiner, fokussierter Apps für den Schulalltag — vom Anmeldetool bis zum Nachhilfetool."
+      title="SchoolTool Dokumentation"
+      description="Dokumentation für die aktiven SchoolTool-Module."
     >
       <div className={styles.home}>
         {/* ── Hero ── */}
@@ -62,11 +62,10 @@ export default function Home() {
               einfach funktionieren.
             </h1>
             <p className={styles.lede}>
-              Eine wachsende Sammlung kleiner, fokussierter Schul-Apps — vom
-              Anmeldetool bis zum Nachhilfetool.
+              Dokumentation für die aktiven SchoolTool-Module.
             </p>
             <div className={styles.actions}>
-              <Link to="/anmeldetool" className={styles.btnPrimary}>
+              <Link to="/restauranttool" className={styles.btnPrimary}>
                 Erste Schritte <ArrowIcon />
               </Link>
               <a href="#apps" className={styles.btnGhost}>
@@ -78,16 +77,37 @@ export default function Home() {
 
         {/* ── App Cards ── */}
         <div id="apps" className={styles.cards}>
-          {APPS.map((app) => (
-            <Link key={app.num} to={app.href} className={styles.card}>
-              <span className={styles.cardNum}>{app.num} — App</span>
-              <h3 className={styles.cardTitle}>{app.title}</h3>
-              <p className={styles.cardDesc}>{app.desc}</p>
-              <span className={styles.cardArrow}>
-                Doku öffnen <ArrowIcon />
-              </span>
-            </Link>
-          ))}
+          {APPS.map((app) => {
+            const content = (
+              <>
+                <span className={styles.cardNum}>{app.num} — App</span>
+                <h3 className={styles.cardTitle}>{app.title}</h3>
+                <p className={styles.cardDesc}>{app.desc}</p>
+                <span className={styles.cardArrow}>
+                  {app.disabled ? "Deaktiviert" : "Doku öffnen"}
+                  {!app.disabled && <ArrowIcon />}
+                </span>
+              </>
+            );
+
+            if (app.disabled) {
+              return (
+                <div
+                  key={app.num}
+                  className={`${styles.card} ${styles.cardDisabled}`}
+                  aria-disabled="true"
+                >
+                  {content}
+                </div>
+              );
+            }
+
+            return (
+              <Link key={app.num} to={app.href} className={styles.card}>
+                {content}
+              </Link>
+            );
+          })}
         </div>
       </div>
     </Layout>

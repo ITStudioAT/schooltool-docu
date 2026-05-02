@@ -8,19 +8,19 @@ sidebar_position: 10
 Hier sind alle derzeit bekannten Fehler dokumentiert. Zu jedem Fehler gibt es — wo vorhanden — einen Workaround.
 
 :::caution
-Diese Liste wird laufend aktualisiert. Behobene Fehler werden in den [Versionshinweisen](./v3-31-11) vermerkt.
+Diese Liste wird laufend aktualisiert. Behobene Fehler werden in den [Versionshinweisen](./v3-32-1) vermerkt.
 :::
 
 ---
 
 ## Offen
 
-| ID   | App | Beschreibung | Workaround |
-| ---- | --- | ------------ | ---------- |
-| #001 | —   | —            | —          |
+| ID  | App | Beschreibung | Workaround |
+| --- | --- | ------------ | ---------- |
+| —   | —   | —            | —          |
 
-## Behoben in v3.31.11
+## Behoben in vx.x.x
 
-| ID   | App  | Beschreibung             |
-| ---- | ---- | ------------------------ |
-| #000 | Alle | Beginn der Dokumentation |
+| ID  | App | Beschreibung |
+| --- | --- | ------------ |
+| —   | —   | —            |

@@ -52,42 +52,13 @@ const config = {
       "classic",
       {
         docs: false,
-        blog: {
-          /* ... */
-        },
+        blog: false,
         theme: { customCss: "./src/css/custom.css" },
       },
     ],
   ],
 
   plugins: [
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "anmeldetool",
-        path: "docs/anmeldetool",
-        routeBasePath: "anmeldetool",
-        sidebarPath: "./sidebars.anmeldetool.js",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "nachhilfetool",
-        path: "docs/nachhilfetool",
-        routeBasePath: "nachhilfetool",
-        sidebarPath: "./sidebars.nachhilfetool.js",
-      },
-    ],
-    [
-      "@docusaurus/plugin-content-docs",
-      {
-        id: "unterrichtstool",
-        path: "docs/unterrichtstool",
-        routeBasePath: "unterrichtstool",
-        sidebarPath: "./sidebars.unterrichtstool.js",
-      },
-    ],
     [
       "@docusaurus/plugin-content-docs",
       {
@@ -130,24 +101,18 @@ const config = {
         hideOnScroll: false,
         items: [
           {
-            type: "doc",
-            docsPluginId: "anmeldetool",
-            docId: "index",
-            label: "Anmeldetool",
+            type: "html",
+            value: '<span class="navbar__link navbar__link--disabled">Anmeldetool</span>',
             position: "left",
           },
           {
-            type: "doc",
-            docsPluginId: "nachhilfetool",
-            docId: "index",
-            label: "Nachhilfetool",
+            type: "html",
+            value: '<span class="navbar__link navbar__link--disabled">Nachhilfetool</span>',
             position: "left",
           },
           {
-            type: "doc",
-            docsPluginId: "unterrichtstool",
-            docId: "index",
-            label: "Unterrichtstool",
+            type: "html",
+            value: '<span class="navbar__link navbar__link--disabled">Unterrichtstool</span>',
             position: "left",
           },
           {
@@ -157,7 +122,6 @@ const config = {
             label: "Restaurantool",
             position: "left",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
             type: "doc",
             docsPluginId: "releases",
